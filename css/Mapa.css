@@ -41,3 +41,31 @@ body{
 .card-mapa p{
     color:#9AA5B1 ;
 }
+
+.textarea-reporte{
+    border-radius: 15px;
+    border: 2px solid #dee2e6;
+    padding: 15px;
+    font-size: 15px;
+    resize: none;
+    transition: .25s;
+    box-shadow: none;
+}
+
+.textarea-reporte:focus{
+    border-color: #dc3545;
+    box-shadow: 0 0 0 .2rem rgba(220,53,69,.2);
+}
+
+.textarea-reporte::placeholder{
+    color: #9ca3af;
+}
+
+.btn-form{
+    background-color: #022649;
+    color:white ;
+}
+.btn-form:hover{
+    background-color: #010b14;
+    color:white ;
+}

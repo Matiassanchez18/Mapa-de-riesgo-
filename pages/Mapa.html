@@ -55,12 +55,16 @@
           <div id="map"></div>
         </div>
 
-        <button class="rounded-5 btn text-white btn-reporte">
+        <button
+          class="rounded-5 btn text-white btn-reporte"
+          data-bs-toggle="modal"
+          data-bs-target="#ModalMapa"
+        >
           <i class="bi bi-plus-lg"></i>
           Reportar
         </button>
         <button class="rounded-3 btn text-white btn-zoom">
-          <i class="bi bi-arrows-angle-expand "></i>
+          <i class="bi bi-arrows-angle-expand"></i>
         </button>
       </section>
 
@@ -85,6 +89,120 @@
     </main>
 
     <footer></footer>
+
+    <!-- Modal -->
+    <div
+      class="mt-5 modal fade"
+      id="ModalMapa"
+      tabindex="-1"
+      aria-labelledby="ModalMapaLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalMapaLabel">
+              Agregar reporte
+              <i class="bi bi-exclamation-triangle text-danger"></i>
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <form>
+                <div class="mb-3">
+                  <label for="hecho" class="form-label"
+                    >Localidad del hecho</label
+                  >
+                  <input
+                    required
+                    type="text"
+                    class="form-control"
+                    id="hecho"
+                    placeholder="Ej: San lorenzo 2100"
+                  />
+                </div>
+                <label for="tipo">Tipo de robo</label>
+
+                <div class="mb-3">
+                  <select id="tipo" class="form-select" required>
+                    <option value="">Seleccione...</option>
+                    <option>Arrebato</option>
+                    <option>Robo de celular</option>
+                    <option>Robo de vehículo</option>
+                    <option>Robo en vivienda</option>
+                    <option>Intento de robo</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+                <div class="mb-3 form-check">
+                  <label for="" class="d-block mb-3">¿Hubó textigos?</label>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio1"
+                      value="si"
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Si</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="inlineRadioOptions"
+                      id="inlineRadio2"
+                      value="no"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >No</label
+                    >
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="descripcion" class="form-label ">
+                    <i class="bi bi-chat-left-text me-2"></i>
+                    Describa el hecho
+                  </label>
+
+                  <textarea
+                    class="form-control textarea-reporte"
+                    id="descripcion"
+                    rows="5"
+                    placeholder="Ej: Se produjo un robo en la esquina de Av. Belgrano y San Martín. Los sospechosos escaparon en una moto..."
+                  ></textarea>
+
+                  <div class="form-text">
+                    Sea lo más claro posible para ayudar a otros usuarios.
+                  </div>
+                </div>
+                <div class="d-flex justify-content-end">
+
+                    <button type="submit" class="btn btn-form">Enviar reporte</button>
+                </div>
+              </form>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="../js/mapa.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
