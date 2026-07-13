@@ -1,71 +1,113 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-body{
-    background-color: #0D1B2A;
+body {
+  background-color: #0d1b2a;
 }
 
-
-#map { height: 350px; }
-.contenedor-mapa{
-    position: relative;
+#map {
+  height: 350px;
 }
-.btn-reporte{
-    background-color:#032f5c ;
-    position: absolute;
-    top: 385px;
-    right: 15px;
-    z-index: 1000;
+.contenedor-mapa {
+  position: relative;
 }
-.btn-zoom{
-    background-color:#032f5c ;
+.btn-reporte {
+  background-color: #032f5c;
   position: absolute;
-    top: 340px;
-    right: 15px;
-    z-index: 1000;  
+  top: 385px;
+  right: 15px;
+  z-index: 1000;
 }
-.btn-reporte:hover{
-    background-color: #022649 ;
+.btn-zoom {
+  background-color: #032f5c;
+  position: absolute;
+  top: 340px;
+  right: 15px;
+  z-index: 1000;
 }
-.btn-zoom:hover{
-    background-color: #022649 ;
+.btn-reporte:hover {
+  background-color: #022649;
 }
-
-
-.card-mapa{
-    background-color: #1B2B3A;
-}
-
-.card-mapa p{
-    color:#9AA5B1 ;
+.btn-zoom:hover {
+  background-color: #022649;
 }
 
-.textarea-reporte{
-    border-radius: 15px;
-    border: 2px solid #dee2e6;
-    padding: 15px;
-    font-size: 15px;
-    resize: none;
-    transition: .25s;
-    box-shadow: none;
+.card-mapa {
+  background-color: #1b2b3a;
 }
 
-.textarea-reporte:focus{
-    border-color: #dc3545;
-    box-shadow: 0 0 0 .2rem rgba(220,53,69,.2);
+.card-mapa p {
+  color: #9aa5b1;
 }
 
-.textarea-reporte::placeholder{
-    color: #9ca3af;
+.textarea-reporte {
+  border-radius: 15px;
+  border: 2px solid #dee2e6;
+  padding: 15px;
+  font-size: 15px;
+  resize: none;
+  transition: 0.25s;
+  box-shadow: none;
 }
 
-.btn-form{
-    background-color: #022649;
-    color:white ;
+.textarea-reporte:focus {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.2);
 }
-.btn-form:hover{
-    background-color: #010b14;
-    color:white ;
+
+.textarea-reporte::placeholder {
+  color: #9ca3af;
+}
+
+.btn-form {
+  background-color: #022649;
+  color: white;
+}
+.btn-form:hover {
+  background-color: #010b14;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  #map {
+    height: 550px;
+    width: 100%;
+  }
+  .btn-reporte {
+    background-color: #032f5c;
+    position: absolute;
+    top: 585px;
+    right:75px;
+    z-index: 1000;
+  }
+  .btn-zoom {
+    background-color: #032f5c;
+    position: absolute;
+    top: 540px;
+    right: 85px;
+    z-index: 1000;
+  }
+}
+
+@media (min-width: 992px) {
+      #map {
+    height: 550px;
+    width: 100%;
+  }
+  .btn-reporte {
+    background-color: #032f5c;
+    position: absolute;
+    top: 585px;
+    right: 315px;
+    z-index: 1000;
+  }
+  .btn-zoom {
+    background-color: #032f5c;
+    position: absolute;
+    top: 540px;
+    right: 325px;
+    z-index: 1000;
+  }
 }
