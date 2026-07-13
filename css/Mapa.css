@@ -13,20 +13,25 @@ body{
     position: relative;
 }
 .btn-reporte{
-    background-color:#378ADD ;
+    background-color:#032f5c ;
     position: absolute;
     top: 385px;
     right: 15px;
     z-index: 1000;
 }
 .btn-zoom{
-    background-color:#378ADD ;
+    background-color:#032f5c ;
   position: absolute;
     top: 340px;
     right: 15px;
     z-index: 1000;  
 }
-
+.btn-reporte:hover{
+    background-color: #022649 ;
+}
+.btn-zoom:hover{
+    background-color: #022649 ;
+}
 
 
 .card-mapa{
