@@ -8,3 +8,11 @@ body{
 }
 
 #map { height: 350px; }
+
+.card-mapa{
+    background-color: #1B2B3A;
+}
+
+.card-mapa p{
+    color:#9AA5B1 ;
+}
