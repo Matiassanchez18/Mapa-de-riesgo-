@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+main {
+  padding-bottom: 170px;
+}
+
+.radar-icon {
+  color: #ef9f27;
+}
+
+.custom-nav,
+.custom-footer {
+  background-color: #1b2b3a;
+  color: #f1f3f5;
+}
+.custom-footer .row {
+  padding: 8px 0;
+}
+
+.custom-footer .row:last-child {
+  min-height: 55px;
+}
+
+footer h4 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+footer small {
+  display: block;
+  font-size: 12px;
+  line-height: 1.1;
+}
+
+.footer-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #adb5bd;
+  text-decoration: none;
+}
+
+.footer-link i {
+    font-size: 1.5rem;
+  margin-bottom: 3px;
+}
+
+.footer-link:hover {
+  color: #fff;
+}
+
+.footer-link.active {
+  color: #14daaf;
+}
+
+@media (min-width: 768px) {
+  footer h4 {
+    font-size: 24px;
+  }
+
+  footer small {
+    font-size: 13px;
+  }
+
+  .custom-footer .row:last-child {
+    min-height: 65px;
+  }
+}
+
+@media (min-width: 992px) {
+  .custom-footer .row {
+    padding: 5px 0;
+  }
+
+  .custom-footer .row:last-child {
+    min-height: 45px;
+  }
+
+  footer h4 {
+    font-size: 16px;
+  }
+
+  footer small {
+    font-size: 10px;
+  }
+
+  .footer-link i {
+    font-size: 18px;
+    margin-bottom: 2px;
+  }
+}
