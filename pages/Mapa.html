@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link rel="stylesheet" href="../css/Mapa.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
+    <title>Mapa de riesgo</title>
+  </head>
+  <body>
+    <header>
+      <section class="container">
+        <div class="input-group mb-3 p-2 mt-2">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Buscar zona o direccion"
+            aria-label="Buscar zona o direccion"
+            aria-describedby="button-addon2"
+          />
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            id="button-addon2"
+          >
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="container">
+        <div class="contenedor-mapa">
+          <div id="map"></div>
+        </div>
+
+        <button
+          class="rounded-5 btn text-white btn-reporte"
+          data-bs-toggle="modal"
+          data-bs-target="#ModalMapa"
+        >
+          <i class="bi bi-plus-lg"></i>
+          Reportar
+        </button>
+        <button class="rounded-3 btn text-white btn-zoom">
+          <i class="bi bi-arrows-angle-expand"></i>
+        </button>
+      </section>
+
+      <section class="container mt-4 mb-5">
+        <div class="mb-4">
+          <div class="card-mapa card p-3">
+            <h2 class="text-danger fs-5">
+              Entrando a una zona peligrosa
+              <i class="bi bi-exclamation-circle fs-5"></i>
+            </h2>
+            <p clas="text-black">
+              Zona norte - hace 20 min - tipo de peligro
+              <i class="bi bi-circle-fill text-danger"></i>
+            </p>
+            <p class="container">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Expedita, officiis. Eligendi dolorum blanditiis beatae aspernatur?
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="fixed-bottom custom-footer">
+      <div class="border-bottom border-secondary">
+        <div class="row text-center g-0">
+          <div class="col border-end border-secondary">
+            <h4 class="mb-0">268</h4>
+            <small>REPORTES</small>
+          </div>
+
+          <div class="col border-end border-secondary">
+            <h4 class="mb-0">18</h4>
+            <small>ZONAS</small>
+          </div>
+
+          <div class="col">
+            <h4 class="mb-0"><i class="bi bi-arrow-up"></i> 12%</h4>
+            <small>ESTE MES</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-0 text-center">
+        <div class="col">
+          <a
+            href="../Index.html"
+            class="footer-link  d-flex flex-column align-items-center text-decoration-none"
+          >
+            <i class="bi bi-house-fill"></i>
+            <small>Inicio</small>
+          </a>
+        </div>
+
+        <div class="col">
+          <a
+            href="../pages/Mapa.html"
+            class="footer-link d-flex flex-column align-items-center active text-decoration-none"
+          >
+            <i class="bi bi-geo-alt-fill"></i>
+            <small>Mapa</small>
+          </a>
+        </div>
+
+        <div class="col">
+          <a
+            href="denuncia.html"
+            class="footer-link d-flex flex-column align-items-center text-decoration-none"
+          >
+            <i class="bi bi-plus-lg"></i>
+            <small>Denuncia</small>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="mt-2 modal fade"
+      id="ModalMapa"
+      tabindex="-1"
+      aria-labelledby="ModalMapaLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="ModalMapaLabel">
+              Agregar reporte
+              <i class="bi bi-exclamation-triangle text-danger"></i>
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form action="">
+              <div class="mb-3">
+                <label for="hecho" class="form-label"
+                  >Localidad del hecho</label
+                >
+                <input
+                  required
+                  type="text"
+                  class="form-control"
+                  id="hecho"
+                  placeholder="Ej: San lorenzo 2100"
+                />
+              </div>
+              <label for="tipo">Tipo de robo</label>
+
+              <div class="mb-3">
+                <select id="tipo" class="form-select" required>
+                  <option value="">Seleccione...</option>
+                  <option>Arrebato</option>
+                  <option>Robo de celular</option>
+                  <option>Robo de vehículo</option>
+                  <option>Robo en vivienda</option>
+                  <option>Intento de robo</option>
+                  <option>Otro</option>
+                </select>
+              </div>
+              <div class="mb-3 form-check">
+                <label for="" class="d-block mb-3">¿Hubo testigos?</label>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio1"
+                    value="si"
+                  />
+                  <label class="form-check-label" for="inlineRadio1">Si</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="inlineRadioOptions"
+                    id="inlineRadio2"
+                    value="no"
+                  />
+                  <label class="form-check-label" for="inlineRadio2">No</label>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="descripcion" class="form-label">
+                  <i class="bi bi-chat-left-text me-2"></i>
+                  Describa el hecho
+                </label>
+
+                <textarea
+                  class="form-control textarea-reporte"
+                  id="descripcion"
+                  rows="5"
+                  placeholder="Ej: Se produjo un robo en la esquina de Av. Belgrano y San Martín. Los sospechosos escaparon en una moto..."
+                ></textarea>
+
+                <div class="form-text">
+                  Sea lo más claro posible para ayudar a otros usuarios.
+                </div>
+              </div>
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-form">
+                  Enviar reporte
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../js/mapa.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <!-- descargar axios y json -->
+  </body>
+</html>
