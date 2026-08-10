@@ -59,17 +59,54 @@
     </header>
 
     <main class="my-4">
-      <section class="container">
-        <div class="card">
+      <section class="container mb-4">
+        <div class="card card-ultimo-incidente">
           <h6 class="card-header">Zona Norte, hace 20 min</h6>
-          <div class="card-body">
-            <h5 class="card-title">
+          <div class="card-body d-flex flex-column justify-content-between">
+            <h6 class="card-title fw-bold fs-3 my-auto">
               Incidente de alto riesgo reportado en Av. Belgrano
-            </h5>
-            <span class="badge rounded-pill text-bg-secondary fw-normal"
-              >Tipo de riesgo</span
-            >
-            <span class="badge rounded-pill text-bg-danger fw-normal">A</span>
+            </h6>
+            <div>
+              <span class="badge rounded-pill text-bg-secondary fw-normal fs-6"
+                >Tipo de riesgo</span
+              >
+              <span class="badge rounded-pill text-bg-danger fw-normal fs-6">A</span>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <i class="bi bi-exclamation-triangle text-warning"></i>
+                <h6>
+                  <a
+                    href="#"
+                    class="stretched-link text-decoration-none text-light"
+                    >Reportar hecho</a
+                  >
+                </h6>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <div class="card">
+              <div class="card-body">
+                <i class="bi bi-map text-info"></i>
+                <h6>
+                  <a
+                    href="#"
+                    class="stretched-link text-decoration-none text-light"
+                    >Ver Mapa</a
+                  >
+                </h6>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -8,6 +8,9 @@ body {
 main {
   padding-bottom: 170px;
 }
+.card {
+    background-color: #1B2B3A;
+}
 
 .radar-icon {
   color: #ef9f27;
@@ -94,9 +97,10 @@ footer small {
     font-size: 18px;
     margin-bottom: 2px;
   }
+
+  .card-ultimo-incidente {
+    min-height: 280px;
+  
+  }
 }
 
-/* =====main===== */
-.card {
-    background-color: var(--mi-color);
-}
