@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Mapa de Riesgo - Reportar un hecho</title>
+     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/reporte.css">
 
 </head>
 <body>
+    <div class="card card-reporte">
     <header>
         <h1>Mapa de Riesgo</h1>
         <button>&#9776;</button>
@@ -49,21 +51,23 @@
             <option value="accidente">Accidente</option>
             <option value="trafico">Trafico de estupefacientes</option>
             <option value="maltrato">Maltrato animal</option>
-            <option value="otro">Otro</option>
+            <option value="otro">Otro</option>  
         </select>
         <div id="otro-hecho-contenedor" style="display: none;">
         <label for="otro-hecho">Especifique:</label>
         <input type="text" id="otro-hecho" name="otro-hecho">
         </div>
         <p>¿Hubo testigos?</p>
-        <label>
+        <div class="radio-group">
+        <label class ="radio-option">
         <input type="radio" name="testigos" value="si" required>
         Sí
         </label>
-        <label>
+        <label class="radio-option">
         <input type="radio" name="testigos" value="no">
         No
         </label>
+        </div>
     </fieldset>
     <fieldset>
         <legend> Evidencias (opcional) </legend>
@@ -73,6 +77,7 @@
 
             <button type="submit">Enviar reporte</button>
         </form>
+        </div>
 
 </body>
 </html>
