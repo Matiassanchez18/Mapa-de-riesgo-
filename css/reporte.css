@@ -59,3 +59,49 @@
 .card-reporte button[type="submit"]:hover {
     background-color: #222;
 }
+
+.card-reporte fieldset {
+    border: 1px solid #2a3d52;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+
+.card-reporte legend {
+    padding: 0 8px;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #adb5bd;
+}
+
+.card-reporte header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-reporte input[type="file"] {
+    color: #adb5bd;
+}
+
+.card-reporte input[type="file"]::file-selector-button {
+    background-color: #2a3d52;
+    color: #f1f3f5;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 12px;
+}
+
+.card-reporte header button {
+    background-color: transparent;
+    border: 1px solid #2a3d52;
+    color: #f1f3f5;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
