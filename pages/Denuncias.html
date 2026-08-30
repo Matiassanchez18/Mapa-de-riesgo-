@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Riesgo - Reportar un hecho</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reporte.css">
+
+</head>
+<body>
+    <div class="card card-reporte">
+    <header>
+        <h1>Mapa de Riesgo</h1>
+        <button>&#9776;</button>
+    </header>
+      <div class="seccion-activa">
+        <p>Formulario de denuncia</p>
+    </div>
+    <form>
+    <fieldset>
+        <legend>Información del hecho</legend>
+            <label for="fecha-hora">Fecha y hora:</label>
+            <input type="datetime-local" id="fecha-hora" name="fecha-hora" required>
+           
+            <label for="localidad">Localidad:</label>
+            <select id="localidad" name="localidad" required>
+                <option value="">Seleccione una localidad</option>
+                <option value="san-miguel-tucuman">San Miguel de Tucumán</option>
+            </select>
+            <label for="barrio">Barrio:</label>
+            <select id="barrio" name="barrio" required>
+            <option value="">Seleccione un barrio</option>
+                <option value="barrio-1">Barrio 1</option>
+                <option value="barrio-2">Barrio 2</option>
+                <option value="barrio-3">Barrio 3</option>
+            </select>
+    </fieldset>
+    <fieldset>  
+        <legend> Descripción del hecho </legend>
+        <label for="descripcion">Describa el evento:</label>
+        <textarea id="descripcion" name="descripcion" rows="6" required></textarea>
+
+        <label for="hecho">¿Qué tipo de ilícito ocurrió?</label>
+        <select id="hecho" name="hecho" required>
+            <option value="">Seleccione un tipo de ilícito</option>
+            <option value="violencia-domestica">Violencia doméstica</option>
+            <option value="acoso">Acoso</option>
+            <option value="robo">Robo</option>
+            <option value="vandalismo">Vandalismo</option>
+            <option value="accidente">Accidente</option>
+            <option value="trafico">Trafico de estupefacientes</option>
+            <option value="maltrato">Maltrato animal</option>
+            <option value="otro">Otro</option>  
+        </select>
+        <div id="otro-hecho-contenedor" style="display: none;">
+        <label for="otro-hecho">Especifique:</label>
+        <input type="text" id="otro-hecho" name="otro-hecho">
+        </div>
+        <p>¿Hubo testigos?</p>
+        <div class="radio-group">
+        <label class ="radio-option">
+        <input type="radio" name="testigos" value="si" required>
+        Sí
+        </label>
+        <label class="radio-option">
+        <input type="radio" name="testigos" value="no">
+        No
+        </label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend> Evidencias (opcional) </legend>
+        <label for="evidencias">Adjunte fotos o videos:</label>
+        <input type="file" id="evidencias" name="evidencias" accept="image/*,video/*" multiple>
+        </fieldset>
+
+            <button type="submit">Enviar reporte</button>
+        </form>
+        </div>
+
+</body>
+</html>
